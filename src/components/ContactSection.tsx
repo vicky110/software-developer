@@ -15,17 +15,19 @@ const schema = yup.object({
   gdprConsent: yup.boolean().oneOf([true], 'You must accept the GDPR consent'),
 });
 
+type FormData = yup.InferType<typeof schema>;
+
 const ContactSection = () => {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm({
+  } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FormData) => {
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
