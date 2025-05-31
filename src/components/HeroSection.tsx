@@ -4,6 +4,13 @@ import { motion } from 'framer-motion';
 import { FiChevronDown } from 'react-icons/fi';
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
@@ -71,6 +78,7 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold text-white hover:shadow-lg transition-shadow"
               >
                 Start Your Project
@@ -78,6 +86,7 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection('portfolio')}
                 className="px-8 py-4 border border-slate-600 rounded-lg font-semibold text-white hover:bg-slate-800 transition-colors"
               >
                 View Portfolio

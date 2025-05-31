@@ -15,7 +15,13 @@ const schema = yup.object({
   gdprConsent: yup.boolean().oneOf([true], 'You must accept the GDPR consent'),
 });
 
-type FormData = yup.InferType<typeof schema>;
+type FormData = {
+  name: string;
+  email: string;
+  projectType: string;
+  message: string;
+  gdprConsent: boolean;
+};
 
 const ContactSection = () => {
   const {
