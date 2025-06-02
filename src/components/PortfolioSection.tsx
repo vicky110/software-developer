@@ -14,7 +14,7 @@ const PortfolioSection = () => {
       title: 'E-Commerce Platform',
       category: 'Web Apps',
       description: 'Modern e-commerce platform with real-time inventory management.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop&crop=center',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       liveUrl: '#',
       githubUrl: '#'
@@ -24,7 +24,7 @@ const PortfolioSection = () => {
       title: 'Mobile Banking App',
       category: 'Mobile',
       description: 'Secure mobile banking application with biometric authentication.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&crop=center',
       technologies: ['React Native', 'TypeScript', 'Firebase'],
       liveUrl: '#',
       githubUrl: '#'
@@ -34,8 +34,38 @@ const PortfolioSection = () => {
       title: 'Enterprise CRM',
       category: 'Enterprise',
       description: 'Comprehensive customer relationship management system.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&crop=center',
       technologies: ['Angular', 'Java', 'PostgreSQL', 'Docker'],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      id: 4,
+      title: 'SaaS Analytics Dashboard',
+      category: 'Web Apps',
+      description: 'Real-time analytics dashboard for business intelligence.',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop&crop=center',
+      technologies: ['Vue.js', 'Python', 'Redis', 'Chart.js'],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      id: 5,
+      title: 'Fitness Tracking App',
+      category: 'Mobile',
+      description: 'Cross-platform fitness tracking with AI-powered recommendations.',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop&crop=center',
+      technologies: ['Flutter', 'Firebase', 'TensorFlow', 'HealthKit'],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      id: 6,
+      title: 'Supply Chain Management',
+      category: 'Enterprise',
+      description: 'End-to-end supply chain management with blockchain integration.',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop&crop=center',
+      technologies: ['React', 'Blockchain', 'Microservices', 'AWS'],
       liveUrl: '#',
       githubUrl: '#'
     }

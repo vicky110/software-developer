@@ -117,7 +117,17 @@ const HeroSection = () => {
                 style={{ perspective: "1000px" }}
               >
                 <div className="w-full h-20 bg-slate-900 rounded-t-lg p-2">
-                  <div className="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 rounded"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 rounded flex flex-col justify-center items-center text-white text-xs">
+                    <div className="text-center">
+                      <div className="font-bold">DevStudio</div>
+                      <div className="text-xs opacity-80">Web Solutions</div>
+                      <div className="mt-1 flex gap-1">
+                        <div className="w-1 h-1 bg-white rounded-full"></div>
+                        <div className="w-1 h-1 bg-white rounded-full"></div>
+                        <div className="w-1 h-1 bg-white rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
@@ -136,7 +146,14 @@ const HeroSection = () => {
                 }}
               >
                 <div className="w-full h-24 bg-slate-900 rounded-t-xl p-1 mt-2">
-                  <div className="w-full h-full bg-gradient-to-br from-pink-500 to-red-500 rounded"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-pink-500 to-red-500 rounded flex flex-col justify-center items-center text-white text-xs">
+                    <div className="text-center">
+                      <div className="text-xs font-bold">Mobile</div>
+                      <div className="text-xs opacity-80">App</div>
+                      <div className="mt-2 w-8 h-1 bg-white/50 rounded"></div>
+                      <div className="mt-1 w-6 h-1 bg-white/30 rounded"></div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
@@ -155,7 +172,17 @@ const HeroSection = () => {
                 }}
               >
                 <div className="w-full h-16 bg-slate-900 rounded-t-lg p-1 mt-1">
-                  <div className="w-full h-full bg-gradient-to-br from-green-500 to-blue-500 rounded"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-green-500 to-blue-500 rounded flex flex-col justify-center items-center text-white text-xs">
+                    <div className="text-center">
+                      <div className="text-xs font-bold">Enterprise</div>
+                      <div className="text-xs opacity-80">Solutions</div>
+                      <div className="mt-1 grid grid-cols-3 gap-1">
+                        <div className="w-2 h-2 bg-white/40 rounded"></div>
+                        <div className="w-2 h-2 bg-white/40 rounded"></div>
+                        <div className="w-2 h-2 bg-white/40 rounded"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
