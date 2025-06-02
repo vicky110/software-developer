@@ -21,7 +21,7 @@ const Header = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 dark:bg-slate-900/90 backdrop-blur-lg border-b border-slate-800 dark:border-slate-800"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800 transition-colors duration-300"
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -38,7 +38,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.1 }}
-                className="text-zinc-300 dark:text-zinc-300 hover:text-white dark:hover:text-white transition-colors"
+                className="text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white transition-colors"
               >
                 {item.name}
               </motion.a>
@@ -60,10 +60,14 @@ const Header = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-slate-800 dark:bg-slate-800 hover:bg-slate-700 dark:hover:bg-slate-700 transition-colors"
+              className="md:hidden p-2 rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
+              {isMenuOpen ? (
+                <FiX size={20} className="text-slate-700 dark:text-white" />
+              ) : (
+                <FiMenu size={20} className="text-slate-700 dark:text-white" />
+              )}
             </motion.button>
           </div>
         </div>
@@ -82,7 +86,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-zinc-300 dark:text-zinc-300 hover:text-white dark:hover:text-white transition-colors"
+                className="block py-2 text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

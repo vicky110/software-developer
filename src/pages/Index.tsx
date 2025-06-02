@@ -15,7 +15,7 @@ import { ThemeProvider } from '../context/ThemeContext';
 const Index = () => {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-slate-900 text-zinc-100 dark:bg-slate-900 dark:text-zinc-100">
+      <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-zinc-100 transition-colors duration-300">
         <Header />
         <main>
           <HeroSection />
