@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
+import { Switch } from './ui/switch';
 import { useTheme } from '../context/ThemeContext';
 
 const Header = () => {
@@ -12,7 +13,6 @@ const Header = () => {
     { name: 'Home', href: '#hero' },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Team', href: '#team' },
     { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -21,7 +21,7 @@ const Header = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-lg border-b border-slate-800"
+      className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 dark:bg-slate-900/90 backdrop-blur-lg border-b border-slate-800 dark:border-slate-800"
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -38,7 +38,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.1 }}
-                className="text-zinc-300 hover:text-white transition-colors"
+                className="text-zinc-300 dark:text-zinc-300 hover:text-white dark:hover:text-white transition-colors"
               >
                 {item.name}
               </motion.a>
@@ -46,21 +46,21 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <FiSun size={20} /> : <FiMoon size={20} />}
-            </motion.button>
+            <div className="flex items-center space-x-3">
+              <FiSun className="text-yellow-500" size={16} />
+              <Switch
+                checked={isDark}
+                onCheckedChange={toggleTheme}
+                className="data-[state=checked]:bg-slate-600 data-[state=unchecked]:bg-yellow-400"
+              />
+              <FiMoon className="text-blue-400" size={16} />
+            </div>
 
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors"
+              className="md:hidden p-2 rounded-lg bg-slate-800 dark:bg-slate-800 hover:bg-slate-700 dark:hover:bg-slate-700 transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
@@ -82,7 +82,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-zinc-300 hover:text-white transition-colors"
+                className="block py-2 text-zinc-300 dark:text-zinc-300 hover:text-white dark:hover:text-white transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

@@ -14,7 +14,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      setIsDark(savedTheme === 'dark');
+      const isDarkMode = savedTheme === 'dark';
+      setIsDark(isDarkMode);
+      document.documentElement.classList.toggle('dark', isDarkMode);
+    } else {
+      // Default to dark mode
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
